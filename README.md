@@ -1,4 +1,4 @@
-# MCT_LogServer_
+# MCT_LogServer
 
 这是 **MinecraftConnectTool** 的日志收集服务端，由 .NET8 驱动
 监听 TCP/HTTP 端口 → 接收 JSON 日志 → 按 IP 限流 → 储存为文本文件。
@@ -7,7 +7,7 @@
 - **无数据库**：日志直接写成 `.txt`，方便排查。  
 - **跨平台**：Windows / Linux 直接运行单文件即可。  
 - **带限流**：默认单 IP 每小时最多 3 次上传，可改。  
-- **支持 Frp**：如果放在 Frp 后面，可开启 PROXY Protocol v2 拿到真实 IP。
+- **支持 Frp**：若当前工作环境无公网,可使用Frp,同时开启 PROXY Protocol v2 ,以便获取真实上传 IP。
 
 ## 构建方式  
 1. 安装 [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)。  
